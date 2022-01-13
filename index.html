@@ -13,36 +13,26 @@
     <h1>Signos</h1>
     <p>Descubra seu signo, preenchendo abaixo com sua data de nascimento.</p>
     <div class="box-input">
-        <label for="dia">Dia:
-          <input type="number" id="dia" name="dia_nasc_user" min="1" max="31">
-        </label>
+        <div class="item-input">
+            <label for="dia" id="dia_user">Dia:</label>
+            <input type="number" id="dia" name="dia_nasc_user" min="1" max="31">
+        </div>
 
-        <label for="mes">Mês:
-          <input type="number" id="mes" name="mes_nasc_user" min="1" max="12">
-        </label>
+        <div class="item-input">
+            <label for="mes" id="mes_user">Mês:</label>
+            <input type="number" id="mes" name="mes_nasc_user" min="1" max="12">
+        </div>
 
-        <label for="ano">Ano:
-          <input type="number" id="ano" name="ano_nasc_user" min="1900">
-        </label>
+        <div class="item-input">
+            <label for="ano" id="ano_user">Ano:</label>
+            <input type="number" id="ano" name="ano_nasc_user" min="1900">
+        </div>
     </div>
     <div class="box-botoes">
         <button>Clique AQUI</button>
     </div>
     <div id="box-saida"></div>
-    <ul class="box-imagens">
-        <li class="imagens" id="aquarius"><img src="imagens/aquarius.jpg" alt="Aquário"></li>
-        <li class="imagens" id="peixes"><img src="imagens/peixes.jpg" alt="Peixes"></li>
-        <li class="imagens" id="aries"><img src="imagens/aries.jpg" alt="Aries"></li>
-        <li class="imagens" id="touro"><img src="imagens/touro.jpg" alt="touro"></li>
-        <li class="imagens" id="gemeos"><img src="imagens/gemeos.jpg" alt="Gêmeos"></li>
-        <li class="imagens" id="cancer"><img src="imagens/cancer.jpg" alt="Câncer"></li>
-        <li class="imagens" id="leao"><img src="imagens/leao.jpg" alt="Leão"></li>
-        <li class="imagens" id="virgem"><img src="imagens/virgem.jpg" alt="Virgem"></li>
-        <li class="imagens" id="libra"><img src="imagens/libra.jpg" alt="Libra"></li>
-        <li class="imagens" id="escorpiao"><img src="imagens/escorpiao.jpg" alt="Escorpião"></li>
-        <li class="imagens" id="sagitario"><img src="imagens/sagitario.jpg" alt="Sagitario"></li>
-        <li class="imagens" id="capricornio"><img src="imagens/capricornio.jpg" alt="Capricornio"></li>
-    </ul>
+    <div class="box-imagens"></div>
     <script src="script.js"></script>
 </body>
 
