@@ -53,7 +53,7 @@ function clicou() {
 
     var dateControl = String(document.querySelector('input[type="date"]').value);
   
-    let data_app = new Date(`${dateControl} 00:00:00`);
+    let data_app = new Date(`2020-12-22 00:00:00`);
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
     //Escolhendo a foto de acordo com o signo
