@@ -7,8 +7,7 @@ img.setAttribute("class", "imagens");
 saida.setAttribute("id", "resultado");
 box_saida.appendChild(saida);
 box_imagens.appendChild(img);
-btn.addEventListener("click", clicou);
-
+btn.addEventListener("click", clicou)
 
 function clicou() {
     // Signos: 
@@ -28,7 +27,7 @@ function clicou() {
     ];
 
     // Função para verificar o range das datas
-    function verifica_data_range(data, data_inicio, data_fim, tipo_comparacao) {
+    const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
         if (tipo_comparacao == "and") {
             return (data >= data_inicio && data <= data_fim);
         } else if (tipo_comparacao == "or") {
@@ -37,7 +36,7 @@ function clicou() {
     }
 
     // Função de retornar o nome do signo, usando uma Arrow Function
-    function retorna_signo(signos, data) {
+    const retorna_signo = (signos, data) => {
         let ano = data.getFullYear();
 
         for (const signo of signos) {
@@ -59,7 +58,7 @@ function clicou() {
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
     //Escolhendo a foto de acordo com o signo
-    switch (nome_signo.trim()) {
+    switch (nome_signo) {
         case "Aquário":
             img.style.transform = "scale(1)";
             img.setAttribute("src", "imagens/aquarius.jpg");
@@ -113,7 +112,7 @@ function clicou() {
         window.alert("[ATENÇÃO] É necessário digitar Dia, Mês e Ano.");
     } else {
         saida.style.display = "inline-block";
-        saida.textContent = `Seu signo é: ${nome_signo}`;
+        saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
     }
 
 }
