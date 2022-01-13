@@ -27,7 +27,7 @@ function clicou() {
     ];
 
     // Função para verificar o range das datas
-    const verifica_data_range = (data, data_inicio, data_fim, tipo_comparacao) => {
+    function verifica_data_range(data, data_inicio, data_fim, tipo_comparacao) {
         if (tipo_comparacao == "and") {
             return (data >= data_inicio && data <= data_fim);
         } else if (tipo_comparacao == "or") {
@@ -36,7 +36,7 @@ function clicou() {
     }
 
     // Função de retornar o nome do signo, usando uma Arrow Function
-    const retorna_signo = (signos, data) => {
+    function retorna_signo(signos, data) {
         let ano = data.getFullYear();
 
         for (const signo of signos) {
@@ -57,7 +57,8 @@ function clicou() {
     let data_app = new Date(`${ano_nasc}-${mes_nasc}-${dia_nasc} 00:00:00`);
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
-    switch (nome_signo) {
+    //Escolhendo a foto de acordo com o signo
+    switch (nome_signo.trim()) {
         case "Aquário":
             img.style.transform = "scale(1)";
             img.setAttribute("src", "imagens/aquarius.jpg");
