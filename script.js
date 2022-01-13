@@ -51,14 +51,15 @@ function clicou() {
         }
     }
 
-    var dateControl = String(document.querySelector('input[type="date"]').value);
-  
-    let data_app = new Date(`2020-12-22 00:00:00`);
+    let dia_nasc = String(document.querySelector('#dia').value);
+    let mes_nasc = String(document.querySelector('#mes').value);
+    let ano_nasc = String(document.querySelector('#ano').value);
+    let data_app = new Date(`${ano_nasc}-${mes_nasc}-${dia_nasc} 00:00:00`);
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
     //Escolhendo a foto de acordo com o signo
 
-    if (dateControl.length == 0) {
+    if (dia_nasc.length == 0 || mes_nasc.length == 0 || ano_nasc.length == 0) {
         window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
     } else {
         switch (nome_signo) {
