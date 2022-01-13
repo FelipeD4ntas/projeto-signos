@@ -8,7 +8,7 @@ saida.setAttribute("id", "resultado");
 box_saida.appendChild(saida);
 box_imagens.appendChild(img);
 btn.addEventListener("click", clicou);
-btn.addEventListener("touchstart", clicou);
+
 
 function clicou() {
     // Signos: 
