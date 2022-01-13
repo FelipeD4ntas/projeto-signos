@@ -1,13 +1,13 @@
-let btn = document.getElementsByTagName('button')[0];
-let saida = document.createElement('p');
-let box_saida = document.querySelector('#box-saida');
-let img = document.createElement('img');
-let box_imagens = document.getElementsByClassName('box-imagens')[0];
-img.setAttribute('class', 'imagens');
-saida.setAttribute('id', 'resultado');
+let btn = document.getElementsByTagName("button")[0];
+let saida = document.createElement("p");
+let box_saida = document.querySelector("#box-saida");
+let img = document.createElement("img");
+let box_imagens = document.getElementsByClassName("box-imagens")[0];
+img.setAttribute("class", "imagens");
+saida.setAttribute("id", "resultado");
 box_saida.appendChild(saida);
 box_imagens.appendChild(img);
-btn.addEventListener('click', clicou)
+btn.addEventListener("click", clicou)
 
 function clicou() {
     // Signos: 
@@ -40,79 +40,78 @@ function clicou() {
         let ano = data.getFullYear();
 
         for (const signo of signos) {
-            let data_inicio_signo = new Date(`${ano}-${signo['DataInicio']} 00:00:00`);
-            let data_fim_signo = new Date(`${ano}-${signo['DataFim']} 23:59:59`);
+            let data_inicio_signo = new Date(`${ano}-${signo["DataInicio"]} 00:00:00`);
+            let data_fim_signo = new Date(`${ano}-${signo["DataFim"]} 23:59:59`);
 
-            let tipo_comparacao = signo['DataInicio'] == '12-22' ? 'or' : 'and';
+            let tipo_comparacao = signo["DataInicio"] == "12-22" ? "or" : "and";
 
             if (verifica_data_range(data, data_inicio_signo, data_fim_signo, tipo_comparacao)) {
-                return signo['Nome'];
+                return signo["Nome"];
             }
         }
     }
 
-    let dia_nasc = String(document.querySelector('#dia').value);
-    let mes_nasc = String(document.querySelector('#mes').value);
-    let ano_nasc = String(document.querySelector('#ano').value);
+    let dia_nasc = String(document.querySelector("#dia").value);
+    let mes_nasc = String(document.querySelector("#mes").value);
+    let ano_nasc = String(document.querySelector("#ano").value);
     let data_app = new Date(`${ano_nasc}-${mes_nasc}-${dia_nasc} 00:00:00`);
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
-
     switch (nome_signo) {
-        case 'Aquário':
+        case "Aquário":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/aquarius.jpg');
+            img.setAttribute("src", "imagens/aquarius.jpg");
             break
-        case 'Peixes':
+        case "Peixes":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/peixes.jpg');
+            img.setAttribute("src", "imagens/peixes.jpg");
             break
-        case 'Áries':
+        case "Áries":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/aries.jpg');
+            img.setAttribute("src", "imagens/aries.jpg");
             break
-        case 'Touro':
+        case "Touro":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/touro.jpg');
+            img.setAttribute("src", "imagens/touro.jpg");
             break
-        case 'Gêmeos':
+        case "Gêmeos":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/gemeos.jpg');
+            img.setAttribute("src", "imagens/gemeos.jpg");
             break
-        case 'Câncer':
+        case "Câncer":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/cancer.jpg');
+            img.setAttribute("src", "imagens/cancer.jpg");
             break
-        case 'Leão':
+        case "Leão":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/leao.jpg');
+            img.setAttribute("src", "imagens/leao.jpg");
             break
-        case 'Virgem':
+        case "Virgem":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/virgem.jpg');
+            img.setAttribute("src", "imagens/virgem.jpg");
             break
-        case 'Libra':
+        case "Libra":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/libra.jpg');
+            img.setAttribute("src", "imagens/libra.jpg");
             break
-        case 'Escorpião':
+        case "Escorpião":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/escorpiao.jpg');
+            img.setAttribute("src", "imagens/escorpiao.jpg");
             break
-        case 'Sagitário':
+        case "Sagitário":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/sagitario.jpg');
+            img.setAttribute("src", "imagens/sagitario.jpg");
             break
-        case 'Capricórnio':
+        case "Capricórnio":
             img.style.transform = "scale(1)";
-            img.setAttribute('src', 'imagens/capricornio.jpg');
+            img.setAttribute("src", "imagens/capricornio.jpg");
             break
     }
     if (dia_nasc.length == 0 || mes_nasc.length == 0 || ano_nasc.length == 0) {
-        window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
+        window.alert("[ATENÇÃO] É necessário digitar Dia, Mês e Ano.");
     } else {
         saida.style.display = "inline-block";
-        saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
+        saida.textContent = `Seu signo é: ${nome_signo}`;
     }
 
 }
