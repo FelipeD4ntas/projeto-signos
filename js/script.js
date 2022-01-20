@@ -103,6 +103,9 @@ function clicou() {
                 img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/capricornio.jpg');
                 break
+            default:
+                status_signo.style.display = 'inline-block';
+                status_signo.innerHTML = `Você está usando um Iphone<br>Tente ver por um celular Android.`;
         }
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
