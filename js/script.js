@@ -28,6 +28,11 @@ function clicou() {
     //Exibindo a foto de acordo com o signo
     if (dia_nasc.length == 0 || mes_nasc.length == 0 || ano_nasc.length == 0) {
         window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
+    } else if (dia_nasc > 31 || mes_nasc > 12) {
+        status_signo.style.display = 'none';
+        saida.style.display = 'none';
+        img.style.transform = 'scale(0)';
+        window.alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
         switch (nome_signo) {
             case 'Aquário':
@@ -104,7 +109,7 @@ function clicou() {
                 break
             default:
                 status_signo.style.display = 'inline-block';
-                status_signo.innerHTML = `Você está usando um Iphone<br>Tente ver por um celular Android.`;
+                status_signo.innerHTML = `Você está usando um Iphone<br>Tente ver por um celular Android.<br>`;
         }
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;

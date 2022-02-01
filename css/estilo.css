@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-image: url('../imagens/fundo.jpg');
     position: relative;
+    padding-bottom: 20px;
 }
 
 .fundo {
@@ -152,10 +153,10 @@ span {
     padding: 0 calc((100% - 1200px) / 2);
     height: 80vh;
     margin: 15px;
+    margin-bottom: 0;
 }
 
 .imagens {
-    list-style-type: none;
     width: 100%;
     transform: scale(0);
     transition: all .7s ease-in-out;
