@@ -15,7 +15,7 @@ btn.addEventListener('click', clicou)
 
 // Signos: 
 import coleção_signos from "./dados.js";
- // Função para verificar o range das datas
+// Função para verificar o range das datas
 import retorna_signo from "./funcao.js";
 
 function clicou() {
@@ -37,7 +37,6 @@ function clicou() {
                 img.setAttribute('src', 'imagens/aquarius.jpg');
                 break
             case 'Peixes':
-                confiável
                 status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Imaginativo e Sensível`;
                 img.style.transform = 'scale(1)';
