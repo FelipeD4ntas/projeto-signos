@@ -123,6 +123,11 @@ input {
     margin: 10px;
     background: rgba(88, 0, 100, 0.502);
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.tema:active {
+    background: rgba(128, 128, 128, 0.479);
 }
 
 #box-saida,
