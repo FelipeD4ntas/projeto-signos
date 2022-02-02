@@ -31,7 +31,7 @@ body {
     opacity: 0.2;
     background-position: top center;
     background-size: cover;
-    background-image: url('../imagens/fundo-2.gif');
+    background-image: url('../imagens/fundo-1.gif');
     z-index: -1;
 }
 
@@ -104,6 +104,25 @@ input {
 .box-botoes {
     display: flex;
     justify-content: center;
+}
+
+.box-temas {
+   display: flex;
+   justify-content: center;
+   padding: 0 calc((100% - 500px) / 2);
+   margin: 20px;
+}
+
+.tema > p {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.tema {
+    margin: 10px;
+    background: rgba(88, 0, 100, 0.502);
+    border-radius: 10px;
 }
 
 #box-saida,

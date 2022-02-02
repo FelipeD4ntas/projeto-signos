@@ -1,4 +1,5 @@
 let btn = document.getElementsByTagName('button')[0];
+
 let saida = document.createElement('p');
 let box_saida = document.querySelector('#box-saida');
 let img = document.createElement('img');
@@ -13,7 +14,9 @@ box_status.appendChild(status_signo);
 box_imagens.appendChild(img);
 btn.addEventListener('click', clicou)
 
-// Signos: 
+// Fundos
+import {mudou1, mudou2, mudou3, mudou4} from './fundo.js';
+// Signos
 import coleção_signos from "./dados.js";
 // Função para verificar o range das datas
 import retorna_signo from "./funcao.js";
