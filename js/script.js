@@ -1,5 +1,6 @@
 let btn = document.getElementsByTagName('button')[0];
-
+let temas = document.getElementsByClassName('tema');
+let fundo = document.getElementsByClassName('fundo')[0];
 let saida = document.createElement('p');
 let box_saida = document.querySelector('#box-saida');
 let img = document.createElement('img');
@@ -13,13 +14,30 @@ box_saida.appendChild(saida);
 box_status.appendChild(status_signo);
 box_imagens.appendChild(img);
 btn.addEventListener('click', clicou)
-
-// Fundos
-import {mudou1, mudou2, mudou3, mudou4} from './fundo.js';
+temas[0].addEventListener('click', mudou1);
+temas[1].addEventListener('click', mudou2);
+temas[2].addEventListener('click', mudou3);
+temas[3].addEventListener('click', mudou4);
 // Signos
 import coleção_signos from "./dados.js";
 // Função para verificar o range das datas
 import retorna_signo from "./funcao.js";
+
+function mudou1() {
+    fundo.style.backgroundImage = 'url("../imagens/fundo-1.gif")'
+}
+
+function mudou2() {
+    fundo.style.backgroundImage = 'url("../imagens/fundo-2.gif")'
+}
+
+function mudou3() {
+    fundo.style.backgroundImage = 'url("../imagens/fundo-3.gif")'
+}
+
+function mudou4() {
+    fundo.style.backgroundImage = 'url("../imagens/fundo-4.gif")'
+}
 
 function clicou() {
     let dia_nasc = String(document.querySelector('#dia').value);
