@@ -14,11 +14,12 @@ box_imagens.appendChild(img);
 btn.addEventListener('click', clicou)
 
 // Fundos 
-import {mudou1, mudou2, mudou3, mudou4} from './fundo.js';
+import { mudou1, mudou2, mudou3, mudou4 } from './fundo.js';
 // Signos
 import coleção_signos from './dados.js';
 // Função para verificar o range das datas
 import retorna_signo from './funcao.js';
+
 
 function clicou() {
     let dia_nasc = String(document.querySelector('#dia').value);
@@ -36,77 +37,55 @@ function clicou() {
         img.style.transform = 'scale(0)';
         window.alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
+        img.style.transform = 'scale(1)';
+        status_signo.style.display = 'inline-block';
         switch (nome_signo) {
             case 'Aquário':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Independente e Simpático`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/aquarius.jpg');
                 break
             case 'Peixes':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Imaginativo e Sensível`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/peixes.jpg');
                 break
             case 'Áries':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Aventureiro e Energético`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/aries.jpg');
                 break
             case 'Touro':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Persistente e Confiável`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/touro.jpg');
                 break
             case 'Gêmeos':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Intelectual e Carinhoso`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/gemeos.jpg');
                 break
             case 'Câncer':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Protetor e Simpático`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/cancer.jpg');
                 break
             case 'Leão':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Generoso e Bondoso`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/leao.jpg');
                 break
             case 'Virgem':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Meticuloso e Prático`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/virgem.jpg');
                 break
             case 'Libra':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Encantador e Sociável`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/libra.jpg');
                 break
             case 'Escorpião':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Poderoso e Apaixonado`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/escorpiao.jpg');
                 break
             case 'Sagitário':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Sincero e Livre`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/sagitario.jpg');
                 break
             case 'Capricórnio':
-                status_signo.style.display = 'inline-block';
                 status_signo.innerHTML = `Cômico e Ambicioso`;
-                img.style.transform = 'scale(1)';
                 img.setAttribute('src', 'imagens/capricornio.jpg');
                 break
             default:
@@ -116,5 +95,4 @@ function clicou() {
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
     }
-
 }
