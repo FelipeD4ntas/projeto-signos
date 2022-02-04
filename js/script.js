@@ -22,9 +22,9 @@ import retorna_signo from './funcao.js';
 
 
 function clicou() {
-    let dia_nasc = String(document.querySelector('#dia').value);
-    let mes_nasc = String(document.querySelector('#mes').value);
-    let ano_nasc = String(document.querySelector('#ano').value);
+    let dia_nasc = document.querySelector('#dia').value;
+    let mes_nasc = document.querySelector('#mes').value;
+    let ano_nasc = document.querySelector('#ano').value;
     let data_app = new Date(`${ano_nasc}-${mes_nasc}-${dia_nasc} 00:00:00`);
     const nome_signo = retorna_signo(coleção_signos, data_app);
 
