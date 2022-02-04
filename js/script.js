@@ -88,8 +88,6 @@ function clicou() {
                 status_signo.innerHTML = `Cômico e Ambicioso`;
                 img.setAttribute('src', 'imagens/capricornio.jpg');
                 break
-            default:
-                status_signo.innerHTML = `Você está usando um Iphone<br>Tente ver por um celular Android.<br>`;
         }
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
