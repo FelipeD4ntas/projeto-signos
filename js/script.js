@@ -55,6 +55,7 @@ function clicou() {
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
             sobre.style.zIndex = '1';
+            box_imagens.style.height = '640px';
         }
         function revirou() {
             box_sobre.style.display = 'none';
@@ -62,6 +63,7 @@ function clicou() {
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';
             img.style.zIndex = '1';
+            box_imagens.style.height = '500px';
         }
         switch (nome_signo) {
             case 'Aquário':
