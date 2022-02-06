@@ -50,12 +50,14 @@ function clicou() {
         box_sobre.addEventListener('click', revirou);
         sobre.style.opacity = '0';
         function virou() {
+            box_sobre.style.display = 'block';
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
             sobre.style.zIndex = '1';
         }
         function revirou() {
+            box_sobre.style.display = 'none';
             sobre.style.opacity = '0';
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';
