@@ -48,7 +48,11 @@ function clicou() {
         status_signo.style.display = 'inline-block';
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
+        box_sobre.style.display = 'none';
         sobre.style.opacity = '0';
+        sobre.style.zIndex = '-1';
+        img.style.opacity = '1';
+        img.style.zIndex = '1';
         function virou() {
             box_sobre.style.display = 'block';
             img.style.opacity = '0';
