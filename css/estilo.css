@@ -195,6 +195,9 @@ span {
 .box-sobre {
     position: absolute;
     max-width: 800px;
+    background: rgba(88, 0, 100, 0.502);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 #sobre_signo p {
