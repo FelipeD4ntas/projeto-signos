@@ -9,7 +9,6 @@ let img = document.createElement('img');
 let box_imagens = document.getElementsByClassName('box-imagens')[0];
 let status_signo = document.createElement('p');
 let box_status = document.getElementById('box-status');
-let corpo = document.getElementsByTagName('body')[0];
 img.setAttribute('class', 'imagens');
 saida.setAttribute('id', 'resultado');
 sobre.setAttribute('id', 'sobre_signo')
@@ -50,7 +49,7 @@ function clicou() {
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
         box_sobre.style.display = 'none';
-        corpo.style.paddingBottom = '20px';
+        box_imagens.style.paddingBottom = '20px';
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
@@ -60,11 +59,11 @@ function clicou() {
         function virou() {
             box_sobre.style.display = 'block';
             if (window.matchMedia('(max-width: 375px)').matches) {
-                corpo.style.paddingBottom = '146px';
+                box_imagens.style.paddingBottom = '150px';
             } else if (window.matchMedia('(max-width: 487px)').matches) {
-                corpo.style.paddingBottom = '100px';
+                box_imagens.style.paddingBottom = '100px';
             } else if (window.matchMedia('(max-width: 510px)').matches) {
-                corpo.style.paddingBottom = '60px';
+                box_imagens.style.paddingBottom = '60px';
             }
             img.style.opacity = '0';
             img.style.zIndex = '-1';
@@ -74,7 +73,7 @@ function clicou() {
 
         function revirou() {
             box_sobre.style.display = 'none';
-            corpo.style.paddingBottom = '20px';
+            box_imagens.style.paddingBottom = '20px';
             sobre.style.opacity = '0';
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';

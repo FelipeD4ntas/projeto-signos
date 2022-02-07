@@ -22,7 +22,6 @@ body {
     background-image: url('../imagens/fundo.jpg');
     background-attachment: fixed;
     position: relative;
-    padding-bottom: 20px;
 }
 
 .fundo {
@@ -190,6 +189,7 @@ span {
     height: 80vh;
     margin: 15px;
     margin-bottom: 0;
+    padding-bottom: 20px;
     position: relative;
 }
 
