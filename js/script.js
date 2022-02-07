@@ -49,7 +49,7 @@ function clicou() {
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
         box_sobre.style.display = 'none';
-        box_imagens.style.paddingBottom = '20px';
+        box_sobre.style.maxHeight = box_imagens.style.height;
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
@@ -58,7 +58,6 @@ function clicou() {
         //função para alternar entre a foto do signo e sua descrição
         function virou() {
             box_sobre.style.display = 'block';
-
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
@@ -67,7 +66,6 @@ function clicou() {
 
         function revirou() {
             box_sobre.style.display = 'none';
-            box_imagens.style.paddingBottom = '20px';
             sobre.style.opacity = '0';
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';
