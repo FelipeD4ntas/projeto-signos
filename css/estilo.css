@@ -83,6 +83,7 @@ label {
 }
 
 input {
+    box-sizing: content-box;
     width: 40px;
     padding: 5px;
     margin-right: 20px;
