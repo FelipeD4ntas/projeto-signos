@@ -59,7 +59,7 @@ function clicou() {
         function virou() {
             box_sobre.style.display = 'block';
             if (window.matchMedia('(max-width: 375px)').matches) {
-                corpo.style.paddingBottom = '130px';
+                corpo.style.paddingBottom = '135px';
             } else if (window.matchMedia('(max-width: 487px)').matches) {
                 corpo.style.paddingBottom = '100px';
             } else if (window.matchMedia('(max-width: 510px)').matches) {
