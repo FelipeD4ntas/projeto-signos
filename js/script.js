@@ -58,13 +58,7 @@ function clicou() {
         //função para alternar entre a foto do signo e sua descrição
         function virou() {
             box_sobre.style.display = 'block';
-            if (window.matchMedia('(max-width: 375px)').matches) {
-                box_imagens.style.paddingBottom = '150px';
-            } else if (window.matchMedia('(max-width: 487px)').matches) {
-                box_imagens.style.paddingBottom = '100px';
-            } else if (window.matchMedia('(max-width: 510px)').matches) {
-                box_imagens.style.paddingBottom = '60px';
-            }
+
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';

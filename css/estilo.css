@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif, sans-serif;
     margin: 0;
     padding: 0;
@@ -196,6 +197,8 @@ span {
 .box-sobre {
     display: none;
     max-width: 800px;
+    max-height: 513.59px;
+    overflow: auto;
     background: rgba(88, 0, 100, 0.502);
     box-shadow: 0px 0px 10px white;
     border-radius: 10px;
