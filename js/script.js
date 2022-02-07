@@ -9,6 +9,7 @@ let img = document.createElement('img');
 let box_imagens = document.getElementsByClassName('box-imagens')[0];
 let status_signo = document.createElement('p');
 let box_status = document.getElementById('box-status');
+let corpo = document.getElementsByTagName('body')[0];
 img.setAttribute('class', 'imagens');
 saida.setAttribute('id', 'resultado');
 sobre.setAttribute('id', 'sobre_signo')
@@ -53,20 +54,33 @@ function clicou() {
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
         img.style.zIndex = '1';
+
+        //função para alternar entre a foto do signo e sua descrição
         function virou() {
             box_sobre.style.display = 'block';
+            if (window.matchMedia('(max-width: 360px)').matches) {
+                corpo.style.paddingBottom = '150px';
+            } else if (window.matchMedia('(max-width: 487px)').matches) {
+                corpo.style.paddingBottom = '100px';
+            } else if (window.matchMedia('(max-width: 510px)').matches) {
+                corpo.style.paddingBottom = '60px';
+            }
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
             sobre.style.zIndex = '1';
         }
+
         function revirou() {
             box_sobre.style.display = 'none';
+            corpo.style.paddingBottom = '20px';
             sobre.style.opacity = '0';
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';
             img.style.zIndex = '1';
         }
+
+        //switch para escolher a descrição de acordo com o nome do signo
         switch (nome_signo) {
             case 'Aquário':
                 status_signo.innerHTML = `Independente e Simpático`;
@@ -118,7 +132,7 @@ function clicou() {
                 <p>Inclusive, são regidos pela Lua, que é diretamente ligada ao nosso emocional.</p>
                 <p><span>Características positivas dos cancerianos:</span> são dedicados e gentis, sempre ouvindo ou cuidando de alguém por perceberam suas emoções e problemas.</p>
                 <p><span>Características negativas dos cancerianos:</span> a carência e o mau humor podem surgir a qualquer momento nos cancerianos, que podem se tornar ciumentos ou se vitimizar</p>
-                <p>Desta maneira, o signo de Câncer mais sensível do zodíaco.</p>`;
+                <p>Desta maneira, o signo de Câncer é o mais sensível do zodíaco.</p>`;
                 break
             case 'Leão':
                 status_signo.innerHTML = `Generoso e Bondoso`;
