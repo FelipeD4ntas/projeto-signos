@@ -50,6 +50,7 @@ function clicou() {
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
         box_sobre.style.display = 'none';
+        corpo.style.paddingBottom = '20px';
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
@@ -59,7 +60,7 @@ function clicou() {
         function virou() {
             box_sobre.style.display = 'block';
             if (window.matchMedia('(max-width: 375px)').matches) {
-                corpo.style.paddingBottom = '144px';
+                corpo.style.paddingBottom = '146px';
             } else if (window.matchMedia('(max-width: 487px)').matches) {
                 corpo.style.paddingBottom = '100px';
             } else if (window.matchMedia('(max-width: 510px)').matches) {
