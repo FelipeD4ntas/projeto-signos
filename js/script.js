@@ -58,7 +58,7 @@ function clicou() {
         //função para alternar entre a foto do signo e sua descrição
         function virou() {
             box_sobre.style.display = 'block';
-            if (window.matchMedia('(max-width: 360px)').matches) {
+            if (window.matchMedia('(max-width: 375px)').matches) {
                 corpo.style.paddingBottom = '150px';
             } else if (window.matchMedia('(max-width: 487px)').matches) {
                 corpo.style.paddingBottom = '100px';
