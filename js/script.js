@@ -59,7 +59,6 @@ function clicou() {
             let medidas = img.getBoundingClientRect();
             let altura = medidas.height;
             box_sobre.style.display = 'block';
-            img.style.transform = 'rotateY(180deg)'
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
@@ -69,7 +68,6 @@ function clicou() {
 
         function revirou() {
             box_sobre.style.display = 'none';
-            img.style.transform = 'rotateY(0deg)'
             sobre.style.opacity = '0';
             sobre.style.zIndex = '-1';
             img.style.opacity = '1';
