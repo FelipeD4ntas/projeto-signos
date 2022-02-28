@@ -36,7 +36,7 @@ function clicou() {
     let ano_nasc = document.getElementById('ano').value;
     let data_app = new Date(`${ano_nasc}/${mes_nasc}/${dia_nasc} 00:00:00`);
     let nome_signo = retorna_signo(coleção_signos, data_app);
-    
+
     //Exibindo a foto de acordo com o signo
     if (dia_nasc.length == 0 || mes_nasc.length == 0 || ano_nasc.length == 0) {
         window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
@@ -58,13 +58,13 @@ function clicou() {
 
         //função para alternar entre a foto do signo e sua descrição
         function virou() {
+            let medidas = img.getBoundingClientRect();
+            let altura = medidas.height;
             box_sobre.style.display = 'block';
             img.style.opacity = '0';
             img.style.zIndex = '-1';
             sobre.style.opacity = '1';
             sobre.style.zIndex = '1';
-            let medidas = img.getBoundingClientRect();
-            let altura = medidas.height;
             box_sobre.style.maxHeight = `${altura}px`;
         }
 
