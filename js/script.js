@@ -43,6 +43,7 @@ function clicou() {
     } else if (dia_nasc > 31 || mes_nasc > 12) {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
+        aviso.style.display = 'none';
         img.style.transform = 'scale(0)';
         window.alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
