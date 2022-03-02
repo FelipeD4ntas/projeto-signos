@@ -31,16 +31,21 @@ import retornaDetalhesSigno from './funçãoRetornaDetalhes.js';
 
 
 function clicou() {
-    let dia_nasc = document.getElementById('dia').value;
-    let mes_nasc = document.getElementById('mes').value;
-    let ano_nasc = document.getElementById('ano').value;
-    let data_app = new Date(`${ano_nasc}/${mes_nasc}/${dia_nasc} 00:00:00`);
+
+    let datas = {
+        dia: document.getElementById('dia').value,
+        mes: document.getElementById('mes').value,
+        ano: document.getElementById('ano').value
+    };
+
+    const { dia, mes, ano } = datas;
+    let data_app = new Date(`${ano}/${mes}/${dia} 00:00:00`);
     let nome_signo = retorna_signo(coleção_signos, data_app);
 
     //Exibindo a foto de acordo com o signo
-    if (dia_nasc.length == 0 || mes_nasc.length == 0 || ano_nasc.length == 0) {
+    if (dia.length == 0 || mes.length == 0 || ano.length == 0) {
         window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
-    } else if (dia_nasc > 31 || mes_nasc > 12) {
+    } else if (dia > 31 || mes > 12) {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
