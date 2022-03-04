@@ -31,26 +31,29 @@ import retornaDetalhesSigno from './funçãoRetornaDetalhes.js';
 
 
 function clicou() {
-
     let datas = {
         dia: document.getElementById('dia').value,
         mes: document.getElementById('mes').value,
         ano: document.getElementById('ano').value
     };
-
     const { dia, mes, ano } = datas;
+    let dia_vazio = dia.length == 0;
+    let mes_vazio = mes.length == 0;
+    let ano_vazio = ano.length == 0;
+    let dataPreenchida = dia_vazio || mes_vazio || ano_vazio;
+    let dataLimite = dia > 31 || mes > 12;
     let data_app = new Date(`${ano}/${mes}/${dia} 00:00:00`);
     let nome_signo = retorna_signo(coleção_signos, data_app);
 
     //Exibindo a foto de acordo com o signo
-    if (dia.length == 0 || mes.length == 0 || ano.length == 0) {
-        window.alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
-    } else if (dia > 31 || mes > 12) {
+    if (dataPreenchida) {
+        alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
+    } else if (dataLimite) {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
         img.style.transform = 'scale(0)';
-        window.alert('[ATENÇÃO] Você digitou uma data inválida!');
+        alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
         img.style.transform = 'scale(1)';
         status_signo.style.display = 'inline-block';
@@ -83,7 +86,7 @@ function clicou() {
         }
 
         //Função para escolher a descrição de acordo com o nome do signo
-        retornaDetalhesSigno(nome_signo, status_signo, img, sobre);
+        retornaDetalhesSigno(nome_signo, status_signo, img, sobre, fundoDois);
 
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
