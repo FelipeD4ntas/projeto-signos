@@ -86,7 +86,7 @@ function clicou() {
         }
 
         //Função para escolher a descrição de acordo com o nome do signo
-        retornaDetalhesSigno(nome_signo, status_signo, img, sobre, fundoDois);
+        retornaDetalhesSigno(nome_signo, status_signo, img, sobre);
 
         saida.style.display = 'inline-block';
         saida.innerHTML = `Seu signo é: <span>${nome_signo}</span>`;
