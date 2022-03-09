@@ -21,7 +21,7 @@ particlesJS('particles-js',
                 enable: true,
                 outMode: "bounce",
                 random: false,
-                speed: 0.12,
+                speed: 1,
                 straight: false,
             },
             number: {

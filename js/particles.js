@@ -68,7 +68,7 @@ var pJS = function(tag_id, params) {
                 enable: true,
                 distance: 100,
                 color: '#fff',
-                opacity: 0.2,
+                opacity: 1,
                 width: 1
             },
             move: {
@@ -1100,7 +1100,7 @@ var pJS = function(tag_id, params) {
         if (pJS.interactivity.events.onclick.enable) {
 
             pJS.interactivity.el.addEventListener('click', function() {
-                
+
                 pJS.interactivity.mouse.click_pos_x = pJS.interactivity.mouse.pos_x;
                 pJS.interactivity.mouse.click_pos_y = pJS.interactivity.mouse.pos_y;
                 pJS.interactivity.mouse.click_time = new Date().getTime();
