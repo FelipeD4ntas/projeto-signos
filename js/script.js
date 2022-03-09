@@ -41,7 +41,7 @@ function clicou() {
     let mes_vazio = mes.length == 0;
     let ano_vazio = ano.length == 0;
     let dataPreenchida = dia_vazio || mes_vazio || ano_vazio;
-    let dataLimite = dia > 31 || mes > 12;
+    let dataLimite = dia > 31 || mes > 12 || dia <= 0 || mes <= 0 || an0 <= 0;
     let data_app = new Date(`${ano}/${mes}/${dia} 00:00:00`);
     let nome_signo = retorna_signo(coleção_signos, data_app);
 
