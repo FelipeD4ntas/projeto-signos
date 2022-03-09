@@ -208,7 +208,7 @@ span {
     padding-bottom: 30px;
     position: relative;
     cursor: pointer;
-    z-index: 175;
+    z-index: -1;
 }
 
 .box-sobre {

@@ -47,12 +47,18 @@ function clicou() {
 
     //Exibindo a foto de acordo com o signo
     if (dataPreenchida) {
+        status_signo.style.display = 'none';
+        saida.style.display = 'none';
+        aviso.style.display = 'none';
+        img.style.transform = 'scale(0)';
+        box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
     } else if (dataLimite) {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
         img.style.transform = 'scale(0)';
+        box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
         img.style.transform = 'scale(1)';
@@ -64,6 +70,7 @@ function clicou() {
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
         img.style.zIndex = '1';
+        box_imagens.style.zIndex = '1';
 
         //função para alternar entre a foto do signo e sua descrição
         function virou() {
