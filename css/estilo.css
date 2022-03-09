@@ -30,14 +30,22 @@ body {
     height: 100%;
     position: absolute;
     opacity: 0.2;
+    top: 0;
     background-position: top center;
     background-size: cover;
     background-image: url('../imagens/fundo-1.gif');
     z-index: -1;
 }
 
-main {
-    z-index: 1;
+#particles-js {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
 }
 
 img {
@@ -64,13 +72,12 @@ p {
     font-size: 2.2rem;
     color: white;
     text-shadow: 1px 1px 1px black;
-    padding: 10px 10px 30px 10px;
 }
 
 .box-input {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin: 30px 0;
     padding: 0 calc((100% - 500px) / 2);
 }
 
@@ -96,6 +103,10 @@ input {
     border-radius: 4px;
     box-shadow: 0px 0px 5px white;
     cursor: pointer;
+}
+
+.item-input {
+    z-index: 175;
 }
 
 #ano {
@@ -127,6 +138,7 @@ input {
     box-shadow: 0px 0px 5px white;
     border-radius: 10px;
     cursor: pointer;
+    z-index: 175;
 }
 
 .tema:first-child {
@@ -175,6 +187,7 @@ button {
     text-shadow: 1px 2px 1px black;
     text-transform: uppercase;
     cursor: pointer;
+    z-index: 175;
 }
 
 button:active {
@@ -194,6 +207,8 @@ span {
     margin-bottom: 0;
     padding-bottom: 30px;
     position: relative;
+    cursor: pointer;
+    z-index: 175;
 }
 
 .box-sobre {
