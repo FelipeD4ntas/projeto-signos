@@ -65,12 +65,13 @@ function clicou() {
     } else {
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
-        img.style.transform = 'scale(1)';
         status_signo.style.display = 'inline-block';
+        aviso.style.display = 'block';
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
         img.style.zIndex = '1';
+        img.style.transform = 'scale(1)';
         box_sobre.style.display = 'none';
         box_sobre.style.opacity = '1';
         box_imagens.style.zIndex = '1';
