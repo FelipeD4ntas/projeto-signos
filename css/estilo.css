@@ -201,9 +201,8 @@ span {
 .box-imagens {
     display: flex;
     justify-content: center;
-    padding: 0 calc((100% - 1200px) / 2);
+    margin: 0 calc((100% - 1230px) / 2);
     height: 80vh;
-    margin: 15px;
     margin-bottom: 0;
     padding-bottom: 30px;
     position: relative;
