@@ -50,28 +50,29 @@ function clicou() {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
-        box_sobre.style.opacity = '0';
         img.style.transform = 'scale(0)';
+        box_sobre.style.opacity = '0';
         box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
     } else if (dataLimite) {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
-        box_sobre.style.opacity = '0';
         img.style.transform = 'scale(0)';
+        box_sobre.style.opacity = '0';
         box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] Você digitou uma data inválida!');
     } else {
-        img.style.transform = 'scale(1)';
-        status_signo.style.display = 'inline-block';
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
-        box_sobre.style.display = 'none';
+        img.style.transform = 'scale(1)';
+        status_signo.style.display = 'inline-block';
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
         img.style.zIndex = '1';
+        box_sobre.style.display = 'none';
+        box_sobre.style.opacity = '1';
         box_imagens.style.zIndex = '1';
 
         //função para alternar entre a foto do signo e sua descrição
@@ -79,11 +80,11 @@ function clicou() {
             let medidas = img.getBoundingClientRect();
             let altura = medidas.height;
             box_sobre.style.display = 'block';
-            img.style.opacity = '0';
-            img.style.zIndex = '-1';
+            box_sobre.style.maxHeight = `${altura}px`;
             sobre.style.opacity = '1';
             sobre.style.zIndex = '1';
-            box_sobre.style.maxHeight = `${altura}px`;
+            img.style.opacity = '0';
+            img.style.zIndex = '-1';
         }
 
         function revirou() {
