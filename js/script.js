@@ -50,6 +50,7 @@ function clicou() {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
+        box_sobre.style.opacity = '0';
         img.style.transform = 'scale(0)';
         box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] É necessário digitar Dia, Mês e Ano.');
@@ -57,6 +58,7 @@ function clicou() {
         status_signo.style.display = 'none';
         saida.style.display = 'none';
         aviso.style.display = 'none';
+        box_sobre.style.opacity = '0';
         img.style.transform = 'scale(0)';
         box_imagens.style.zIndex = '-1';
         alert('[ATENÇÃO] Você digitou uma data inválida!');
