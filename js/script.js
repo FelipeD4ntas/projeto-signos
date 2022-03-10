@@ -78,11 +78,11 @@ function clicou() {
         function virou() {
             let medidas = img.getBoundingClientRect();
             let altura = medidas.height;
+            box_sobre.style.maxHeight = `${altura}px`;
             box_sobre.style.display = 'block';
+            sobre.style.opacity = '1';
             img.style.zIndex = '-1';
             img.style.opacity = '0';
-            sobre.style.opacity = '1';
-            box_sobre.style.maxHeight = `${altura}px`;
         };
 
         function revirou() {
