@@ -16,6 +16,12 @@ particlesJS('particles-js',
             collisions: {
                 enable: false,
             },
+            line_linked: {
+                enable: true,
+                color: "#367dad",
+                opacity: 1,
+                width: 1
+            },
             move: {
                 direction: "none",
                 enable: true,
