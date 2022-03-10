@@ -68,6 +68,7 @@ function clicou() {
         img.addEventListener('click', virou);
         box_sobre.addEventListener('click', revirou);
         box_sobre.style.display = 'none';
+        box_sobre.style.opacity = '1';
         sobre.style.opacity = '0';
         sobre.style.zIndex = '-1';
         img.style.opacity = '1';
